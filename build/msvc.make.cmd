@@ -31,8 +31,12 @@ set WORKSPACE_PATH_BUILD=%WORKSPACE_PATH%\temp
 
 if exist %WORKSPACE_PATH_BUILD%\build.done.flag goto :eof
 
+if "%XYO_PLATFORM%" == "win64-msvc-2022" copy /Y /B build\source\Makefile.msvc64 source\win32\Makefile
+if "%XYO_PLATFORM%" == "win32-msvc-2022" copy /Y /B build\source\Makefile.msvc32 source\win32\Makefile
+
 if "%XYO_PLATFORM%" == "win64-msvc-2019" copy /Y /B build\source\Makefile.msvc64 source\win32\Makefile
 if "%XYO_PLATFORM%" == "win32-msvc-2019" copy /Y /B build\source\Makefile.msvc32 source\win32\Makefile
+
 if "%XYO_PLATFORM%" == "win64-msvc-2017" copy /Y /B build\source\Makefile.msvc64 source\win32\Makefile
 if "%XYO_PLATFORM%" == "win32-msvc-2017" copy /Y /B build\source\Makefile.msvc32 source\win32\Makefile
 
