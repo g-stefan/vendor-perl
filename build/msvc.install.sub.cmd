@@ -12,6 +12,6 @@ rem ---
 
 if not exist "%INSTALL_PATH%\" mkdir "%INSTALL_PATH%"
 
-xcopy /Y /S /E "temp\perl\*" "%INSTALL_PATH%\"
+xcopy /Y /S /E "output\*" "%INSTALL_PATH%\"
 del /Q /S /F "%INSTALL_PATH%\*.pdb"
 

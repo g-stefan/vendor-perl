@@ -22,11 +22,13 @@ if not "%ACTION%" == "make" goto :eof
 
 call :cmdX xyo-cc --mode=%ACTION% --source-has-archive perl
 
+if not exist output\ mkdir output
 if not exist temp\ mkdir temp
 
 set INCLUDE=%XYO_PATH_REPOSITORY%\include;%INCLUDE%
 set LIB=%XYO_PATH_REPOSITORY%\lib;%LIB%
 set WORKSPACE_PATH=%CD%
+set WORKSPACE_PATH_OUTPUT=%WORKSPACE_PATH%\output
 set WORKSPACE_PATH_BUILD=%WORKSPACE_PATH%\temp
 
 if exist %WORKSPACE_PATH_BUILD%\build.done.flag goto :eof
@@ -42,9 +44,9 @@ if "%XYO_PLATFORM%" == "win32-msvc-2017" copy /Y /B build\source\Makefile.msvc32
 
 pushd "source\win32"
 
-nmake -f Makefile INST_DRV="%WORKSPACE_PATH_BUILD%"
+nmake -f Makefile INST_DRV="%WORKSPACE_PATH_OUTPUT%"
 if errorlevel 1 goto makeError
-nmake -f Makefile INST_DRV="%WORKSPACE_PATH_BUILD%" install
+nmake -f Makefile INST_DRV="%WORKSPACE_PATH_OUTPUT%" install
 if errorlevel 1 goto makeError
 
 goto buildDone
