@@ -5,4 +5,5 @@
 
 messageAction("install");
 
+forceRemoveDirRecursively(pathRepository + "/opt/perl");
 exitIf(!Shell.copyDirRecursively("output", pathRepository + "/opt/perl"));
