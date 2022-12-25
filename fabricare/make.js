@@ -23,9 +23,9 @@ Shell.mkdirRecursivelyIfNotExists("output/lib");
 Shell.mkdirRecursivelyIfNotExists("temp");
 
 if (Platform.name.indexOf("win64") >= 0) {
-	Shell.copyFile("fabricare/Makefile.msvc64", "source/win32/Makefile");
+	Shell.copyFile("fabricare/source/Makefile.msvc64", "source/win32/Makefile");
 }else{
-	Shell.copyFile("fabricare/Makefile.msvc32", "source/win32/Makefile");
+	Shell.copyFile("fabricare/source/Makefile.msvc32", "source/win32/Makefile");
 };
 
 var outputPath=Shell.getcwd()+"\\output";
