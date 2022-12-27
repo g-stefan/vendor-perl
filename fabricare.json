@@ -2,7 +2,7 @@
 	"project": {
 		"name" : "perl",
 		"type" : "xyo-cpp",
-		"SPDX-License-Identifier": "LicenseRef-",
+		"SPDX-License-Identifier": "GPL-1.0-or-later",
 		"sourceLink" : "https://www.perl.org/",
 		"version" : "5.34.1"
 	}
