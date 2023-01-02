@@ -5,7 +5,7 @@
 
 messageAction("clean");
 
-forceRemoveDirRecursively("output");
+Shell.removeDirRecursivelyForce("output");
 Shell.removeDirRecursively("temp");
-forceRemoveDirRecursively("source");
+Shell.removeDirRecursivelyForce("source");
 
