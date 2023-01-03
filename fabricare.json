@@ -1,14 +1,18 @@
 {
-	"project": {
-		"name" : "perl",
+	"solution": {
+		"name" : "vendor-perl",
 		"type" : "xyo-cpp",
-		"SPDX-License-Identifier": "GPL-1.0-or-later",
-		"sourceLink" : "https://www.perl.org/",
-		"version" : "5.36.0",
-		"hasRelease" : true,
+		"projects": [
+			{
+				"name" : "perl",
+				"SPDX-License-Identifier": "GPL-1.0-or-later",
+				"sourceLink" : "https://www.perl.org/",
+				"version" : "5.36.0",
+				"noVersion" : true
+			}
+		],
+		"releaseName" : "perl",
 		"releaseOutput" : true,
-		"noVersion" : true,
-		"githubRelease" : true,
-		"githubRepository" : "vendor-perl"
+		"hasGithub" : true
 	}
 }
