@@ -7,7 +7,7 @@
 				"name" : "perl",
 				"SPDX-License-Identifier": "GPL-1.0-or-later",
 				"sourceLink" : "https://www.perl.org/",
-				"version" : "5.36.0",
+				"version" : "5.38.2",
 				"noVersion" : true
 			}
 		],
