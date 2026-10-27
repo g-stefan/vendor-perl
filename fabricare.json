@@ -1,6 +1,5 @@
 {
 	"solution": {
-		"namespace" : "xyo",
 		"name" : "vendor-perl",
 		"type" : "xyo-cpp",
 		"projects": [
